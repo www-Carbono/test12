@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TFT Composition Overlay Control</title>
+    <link rel="stylesheet" href="./desktop.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Overwolf + TFT</p>
+        <h1>TFT Composition Overlay</h1>
+        <p class="lede">
+          Base inicial para un overlay in-game que muestra bench, board, tienda y estado del jugador.
+          El flujo de augments se deja fuera para mantener compliance con Riot/Overwolf.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>Estado</h2>
+          <dl class="status-list">
+            <div>
+              <dt>Conexión GEP</dt>
+              <dd id="status-gep">Desconectado</dd>
+            </div>
+            <div>
+              <dt>Juego</dt>
+              <dd id="status-game">No detectado</dd>
+            </div>
+            <div>
+              <dt>Última actualización</dt>
+              <dd id="status-updated">-</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="panel">
+          <h2>Acciones</h2>
+          <div class="actions">
+            <button id="open-overlay">Abrir overlay</button>
+            <button id="hide-overlay" class="secondary">Ocultar overlay</button>
+            <button id="inject-mock" class="secondary">Cargar datos mock</button>
+            <button id="reset-state" class="ghost">Resetear estado</button>
+          </div>
+        </article>
+
+        <article class="panel panel-wide">
+          <h2>Siguiente fase</h2>
+          <ol>
+            <li>Añadir mapeo real de ids TFT a assets por set.</li>
+            <li>Persistir preferencias del overlay: escala, posición y secciones visibles.</li>
+            <li>Validar en partida real la lectura de board, bench, store y item select.</li>
+            <li>Separar capa UI y capa de eventos en módulos más finos cuando metas assets y filtros.</li>
+          </ol>
+        </article>
+      </section>
+    </main>
+
+    <script src="../common/tft-state.js"></script>
+    <script src="./desktop.js"></script>
+  </body>
+</html>

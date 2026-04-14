@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TFT Overlay</title>
+    <link rel="stylesheet" href="./overlay.css" />
+  </head>
+  <body>
+    <div class="overlay-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">TFT Composition</p>
+          <h1>Overlay</h1>
+        </div>
+        <div class="status-badges">
+          <span class="badge" id="connection-badge">Disconnected</span>
+          <span class="badge badge-muted" id="game-badge">No game</span>
+        </div>
+      </header>
+
+      <section class="panel player-panel">
+        <div class="metric">
+          <span class="metric-label">Nivel</span>
+          <strong id="player-level">0</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">XP</span>
+          <strong id="player-xp">0 / 0</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Oro</span>
+          <strong id="player-gold">0</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Vida</span>
+          <strong id="player-health">100</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Pos.</span>
+          <strong id="player-rank">0</strong>
+        </div>
+        <div class="metric">
+          <span class="metric-label">Ronda</span>
+          <strong id="round-stage">-</strong>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Store</h2>
+          <span id="game-mode">-</span>
+        </div>
+        <div class="list five-col" id="store-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Bench</h2>
+          <span id="bench-count">0</span>
+        </div>
+        <div class="list" id="bench-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Board</h2>
+          <span id="board-count">0</span>
+        </div>
+        <div class="list" id="board-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Item Selection</h2>
+          <span>Sin augments</span>
+        </div>
+        <div class="list four-col" id="items-list"></div>
+      </section>
+    </div>
+
+    <script src="../common/tft-state.js"></script>
+    <script src="./overlay.js"></script>
+  </body>
+</html>
