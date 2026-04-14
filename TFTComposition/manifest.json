@@ -6,7 +6,10 @@
     "author": "Antonio",
     "version": "0.1.0",
     "minimum-overwolf-version": "0.230.0",
-    "description": "Overlay de TFT para mostrar board, bench, shop y estado del jugador durante la partida."
+    "description": "Overlay de TFT para mostrar board, bench, shop y estado del jugador durante la partida.",
+    "icon": "assets/IconMouseOver.png",
+    "icon_gray": "assets/IconMouseNormal.png",
+    "window_icon": "assets/WindowIcon.png"
   },
   "permissions": [
     "GameInfo",
